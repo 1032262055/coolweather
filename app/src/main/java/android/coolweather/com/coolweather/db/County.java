@@ -1,6 +1,6 @@
 package android.coolweather.com.coolweather.db;
 
-import DataSupport;
+import org.litepal.crud.DataSupport;
 
 /**
  * Created by asus on 2017/6/6.
@@ -8,7 +8,7 @@ import DataSupport;
 
 public class County extends DataSupport {
     private int id;
-    private String　countyName;//记录县的名字
+    private String countyName;//记录县的名字
     private String weatherId;//记录县所对应的的天气
     private int cityId;//记录当前县所属市的id值
 
@@ -34,5 +34,18 @@ public class County extends DataSupport {
 
     public void setCityId(int cityId) {
         this.cityId = cityId;
+    }
+
+    public String getCountyName() {
+        return countyName;
+    }
+
+    public void setCountyName(String countyName) {
+        this.countyName = countyName;
+    }
+
+    @Override
+    public synchronized boolean save() {
+        return super.save();
     }
 }

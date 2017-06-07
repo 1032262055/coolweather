@@ -1,6 +1,6 @@
 package android.coolweather.com.coolweather.db;
 
-import DataSupport;
+import org.litepal.crud.DataSupport;
 
 /**
  * Created by asus on 2017/6/6.
@@ -34,5 +34,10 @@ public class Province extends DataSupport {
 
     public void setProvinceCode(int provinceCode) {
         this.provinceCode = provinceCode;
+    }
+
+    @Override
+    public synchronized boolean save() {
+        return super.save();
     }
 }

@@ -1,6 +1,6 @@
 package android.coolweather.com.coolweather.db;
 
-import DataSupport;
+import org.litepal.crud.DataSupport;
 
 /**
  * Created by asus on 2017/6/6.
@@ -42,5 +42,10 @@ public class City extends DataSupport {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    @Override
+    public synchronized boolean save() {
+        return super.save();
     }
 }
