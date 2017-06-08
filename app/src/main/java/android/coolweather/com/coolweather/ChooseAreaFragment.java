@@ -90,9 +90,11 @@ public class ChooseAreaFragment extends Fragment {
                     selectCity = cityList.get(position);
                     queryCounties();
                 }else if(currentLevel == LEVEL_COUNTY){
+
                     String weatherId = countyList.get(position).getWeatherId();
 
                     if(getActivity() instanceof  MainActivity){
+                       Log.d("啦啦啦啦。。。。","失败");
                         Intent intent = new Intent(getActivity(),WeatherActivity.class);
                         intent.putExtra("weather_id",weatherId);
                         startActivity(intent);
@@ -140,7 +142,6 @@ public class ChooseAreaFragment extends Fragment {
     }
     //查询全国所有的市，优先从数据库查询，如果没有再到服务器查询
     private void  queryCities(){
-        System.out.print("正在获取市级信息。。。");
         Log.i("正在获取市级信息","");
         titleText.setText(selectedProvince.getProvinceName());
         backButton.setVisibility(View.VISIBLE);
@@ -162,7 +163,6 @@ public class ChooseAreaFragment extends Fragment {
     }
     //查询全国所有的县，优先从数据库查询，如果没有再到服务器查询
     private void  queryCounties(){
-        System.out.print("正在获取县级信息。。。");
         Log.i("正在获取县级信息","");
         titleText.setText(selectCity.getCityName());
         backButton.setVisibility(View.VISIBLE);
