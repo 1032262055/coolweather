@@ -3,13 +3,15 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <TextView
+        android:id="@+id/xin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="15dp"
-        android:text="生活建议"
-        android:textColor="#fff"
-        android:textSize="20sp"/>
+        android:text="爱 心 提 示"
+        android:layout_gravity="center"
+        android:textColor="#ff2222"
+        android:textSize="30sp"/>
     <TextView
         android:id="@+id/comfort_text"
         android:layout_width="wrap_content"

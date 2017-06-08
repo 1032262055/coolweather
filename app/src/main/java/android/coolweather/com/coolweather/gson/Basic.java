@@ -10,6 +10,9 @@ public class Basic {
     @SerializedName("city")
     public String cityName;
 
+    @SerializedName("lv")
+    public String love;
+
     @SerializedName("id")
     public String weatherId;
 
